@@ -1,18 +1,20 @@
-#include<stdio.h>
-int main() 
+ 
+#include <stdio.h>
+int main()
 {
-	int n,i;
-	int sum=0;
-	printf("Enter the max values of series: ");
-	scanf("%d",&n);
-	sum = (n * (n + 1)) / 2;
-	printf("Sum of the series: ");
-	for (i =1;i <= n;i++) 
-	{
-		if (i!=n)
-		             printf("%d + ",i); 
-					 else
-		             printf("%d = %d ",i,sum);
-	}
-	return 0;
+    int num, sum = 0;
+    printf("Enter the maximum value: ");
+    scanf("%d", &num);
+    printf("odd Numbers Between 0 To %d are: \n", num);
+    for (int i = 1; i <= num; i++ )
+    {
+        if (i % 2 != 0)
+        {
+            printf("%d\n", i);
+            sum = sum + i;
+        }
+    }
+    printf("The Sum of odd Numbers From 0 To %d is %d.", num, sum);
+    return 0;
 }
+
